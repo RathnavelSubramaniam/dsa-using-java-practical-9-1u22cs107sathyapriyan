@@ -21,14 +21,15 @@ public void push(int data)
 // Inspects the element at the top of the stack. This method runs in O(1) time.
 public int pop() 
 {
+    //start your code
 }
 public boolean isFull()
 {
-   
+   //start your code
 }
 public boolean isEmpty()
 {
-    
+    // start your code
 }
 public void display()
 {
@@ -36,7 +37,7 @@ public void display()
     System.out.println("Stack is Underflow. No elements to display in Empty Stack");
     else
     {
-     System.out.println("Stack Elements");
+     System.out.println("Stack Elements:Top of the Stack Element is");
     for(int i=top;i>=0;i--)
     System.out.println(stack[i]);
     }
