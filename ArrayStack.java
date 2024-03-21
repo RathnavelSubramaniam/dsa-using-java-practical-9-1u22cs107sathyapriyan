@@ -17,19 +17,45 @@ public int size()
 // Inserts an element at the top of the stack. This method runs in O(1) time.
 public void push(int data) 
 {
+    if(isFull())
+    {
+        System.out.println("Stack is Overflow. not possible to insert in full stack");
+    }
+    else
+    {
+        ++top;
+        stack[top]=data;
+        System.out.println("Element is inserted");
+    }
 }
 // Inspects the element at the top of the stack. This method runs in O(1) time.
 public int pop() 
 {
-    //start your code
+   int data=-1;
+   if(isEmpty())
+   {
+    System.out.println("Stack is Overflow. not possible to insert in full stack");
+   } 
+   else
+   {
+    data=stack[top];
+    --top;
+   }
+   return data;
 }
 public boolean isFull()
 {
-   //start your code
+   if(size()==capacity)
+   return true;
+   else
+   return false;
 }
 public boolean isEmpty()
 {
-    // start your code
+    if(top < 0)
+    return true;
+    else
+    return false;
 }
 public void display()
 {
